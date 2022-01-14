@@ -82,7 +82,7 @@ foreach (CBLAS_FLAG ${CBLAS_FLAGS})
   GenerateNamedObjects("${BLAS3_SOURCES}" "" "" ${CBLAS_FLAG} "" "" false ${DISABLE_COMPLEX})
   GenerateNamedObjects("${BLAS3_MANGLED_SOURCES}" "" "" ${CBLAS_FLAG} "" "" false ${MANGLE_COMPLEX})
 
-  GenerateNamedObjects("xerbla.c" "" "xerbla" ${CBLAS_FLAG} "" "" true)
+  GenerateNamedObjects("xerbla.c" "" "xerbla" ${CBLAS_FLAG} "_interf" "" true)
   #sdsdot, dsdot
   if (BUILD_SINGLE OR BUILD_DOUBLE)
   GenerateNamedObjects("sdsdot.c" "" "sdsdot" ${CBLAS_FLAG} "" "" true "SINGLE")
